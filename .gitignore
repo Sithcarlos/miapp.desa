@@ -12,5 +12,4 @@ npm-debug.log
 yarn-error.log
 # personalizado
 /storage/database.sqlite
-package-lock.json
-composer.lock
+
