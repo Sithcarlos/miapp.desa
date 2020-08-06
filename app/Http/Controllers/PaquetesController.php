@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
-use App\paquetes;
 use Illuminate\Http\Request;
 
 class PaquetesController extends Controller {

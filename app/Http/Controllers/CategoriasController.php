@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
-use App\categorias;
 use Illuminate\Http\Request;
 
 class CategoriasController extends Controller {
