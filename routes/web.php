@@ -1,5 +1,7 @@
 <?php
+
 declare(strict_types=1);
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,9 +14,26 @@ use Illuminate\Support\Facades\Route;
   | contains the "web" middleware group. Now create something great!
   |
  */
-
+/**
+  Route::get('/', function () {
+  return Redirect::to('https://axti.net/menu-qr');
+  });
+ */
 Route::get('/', 'InicioController@index')->name('raiz');
 
-Auth::routes(['verify' => true]);
+// Rutas del grupo de acceso
+Auth::routes(['verify' => true, 'register' => false]);
 
-Route::get('/home', 'HomeController@index')->name('home')->middleware(['auth','verified']);
+// Pagina inicial de sesion
+Route::get('/home', 'HomeController@index')->name('home')->middleware(['auth', 'verified']);
+
+/**
+ * Escribir rutas desde aqui
+ */
+//
+
+/**
+ * Escribir rutas antes de aqui
+ * Obtiene el restaurante y lo muestra al publico
+ */
+Route::get('/{nombre}', 'RestaurantesController@show');
