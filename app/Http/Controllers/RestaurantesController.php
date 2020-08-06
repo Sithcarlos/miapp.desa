@@ -1,19 +1,20 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Controllers;
 
 use App\restaurantes;
 use Illuminate\Http\Request;
 
-class RestaurantesController extends Controller
-{
+class RestaurantesController extends Controller {
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    public function index() {
         //
     }
 
@@ -22,8 +23,7 @@ class RestaurantesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
+    public function create() {
         //
     }
 
@@ -33,8 +33,7 @@ class RestaurantesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request) {
         //
     }
 
@@ -44,8 +43,7 @@ class RestaurantesController extends Controller
      * @param  \App\restaurantes  $restaurantes
      * @return \Illuminate\Http\Response
      */
-    public function show(restaurantes $restaurantes)
-    {
+    public function show(restaurantes $restaurantes) {
         //
     }
 
@@ -55,8 +53,7 @@ class RestaurantesController extends Controller
      * @param  \App\restaurantes  $restaurantes
      * @return \Illuminate\Http\Response
      */
-    public function edit(restaurantes $restaurantes)
-    {
+    public function edit(restaurantes $restaurantes) {
         //
     }
 
@@ -67,8 +64,7 @@ class RestaurantesController extends Controller
      * @param  \App\restaurantes  $restaurantes
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, restaurantes $restaurantes)
-    {
+    public function update(Request $request, restaurantes $restaurantes) {
         //
     }
 
@@ -78,8 +74,8 @@ class RestaurantesController extends Controller
      * @param  \App\restaurantes  $restaurantes
      * @return \Illuminate\Http\Response
      */
-    public function destroy(restaurantes $restaurantes)
-    {
+    public function destroy(restaurantes $restaurantes) {
         //
     }
+
 }

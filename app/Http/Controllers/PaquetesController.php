@@ -1,19 +1,20 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Controllers;
 
 use App\paquetes;
 use Illuminate\Http\Request;
 
-class PaquetesController extends Controller
-{
+class PaquetesController extends Controller {
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    public function index() {
         //
     }
 
@@ -22,8 +23,7 @@ class PaquetesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
+    public function create() {
         //
     }
 
@@ -33,8 +33,7 @@ class PaquetesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request) {
         //
     }
 
@@ -44,8 +43,7 @@ class PaquetesController extends Controller
      * @param  \App\paquetes  $paquetes
      * @return \Illuminate\Http\Response
      */
-    public function show(paquetes $paquetes)
-    {
+    public function show(paquetes $paquetes) {
         //
     }
 
@@ -55,8 +53,7 @@ class PaquetesController extends Controller
      * @param  \App\paquetes  $paquetes
      * @return \Illuminate\Http\Response
      */
-    public function edit(paquetes $paquetes)
-    {
+    public function edit(paquetes $paquetes) {
         //
     }
 
@@ -67,8 +64,7 @@ class PaquetesController extends Controller
      * @param  \App\paquetes  $paquetes
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, paquetes $paquetes)
-    {
+    public function update(Request $request, paquetes $paquetes) {
         //
     }
 
@@ -78,8 +74,8 @@ class PaquetesController extends Controller
      * @param  \App\paquetes  $paquetes
      * @return \Illuminate\Http\Response
      */
-    public function destroy(paquetes $paquetes)
-    {
+    public function destroy(paquetes $paquetes) {
         //
     }
+
 }

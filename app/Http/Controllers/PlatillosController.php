@@ -1,19 +1,20 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Controllers;
 
 use App\platillos;
 use Illuminate\Http\Request;
 
-class PlatillosController extends Controller
-{
+class PlatillosController extends Controller {
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    public function index() {
         //
     }
 
@@ -22,8 +23,7 @@ class PlatillosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
+    public function create() {
         //
     }
 
@@ -33,8 +33,7 @@ class PlatillosController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request) {
         //
     }
 
@@ -44,8 +43,7 @@ class PlatillosController extends Controller
      * @param  \App\platillos  $platillos
      * @return \Illuminate\Http\Response
      */
-    public function show(platillos $platillos)
-    {
+    public function show(platillos $platillos) {
         //
     }
 
@@ -55,8 +53,7 @@ class PlatillosController extends Controller
      * @param  \App\platillos  $platillos
      * @return \Illuminate\Http\Response
      */
-    public function edit(platillos $platillos)
-    {
+    public function edit(platillos $platillos) {
         //
     }
 
@@ -67,8 +64,7 @@ class PlatillosController extends Controller
      * @param  \App\platillos  $platillos
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, platillos $platillos)
-    {
+    public function update(Request $request, platillos $platillos) {
         //
     }
 
@@ -78,8 +74,8 @@ class PlatillosController extends Controller
      * @param  \App\platillos  $platillos
      * @return \Illuminate\Http\Response
      */
-    public function destroy(platillos $platillos)
-    {
+    public function destroy(platillos $platillos) {
         //
     }
+
 }

@@ -1,19 +1,20 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Controllers;
 
 use App\categorias;
 use Illuminate\Http\Request;
 
-class CategoriasController extends Controller
-{
+class CategoriasController extends Controller {
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    public function index() {
         //
     }
 
@@ -22,8 +23,7 @@ class CategoriasController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
+    public function create() {
         //
     }
 
@@ -33,8 +33,7 @@ class CategoriasController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request) {
         //
     }
 
@@ -44,8 +43,7 @@ class CategoriasController extends Controller
      * @param  \App\categorias  $categorias
      * @return \Illuminate\Http\Response
      */
-    public function show(categorias $categorias)
-    {
+    public function show(categorias $categorias) {
         //
     }
 
@@ -55,8 +53,7 @@ class CategoriasController extends Controller
      * @param  \App\categorias  $categorias
      * @return \Illuminate\Http\Response
      */
-    public function edit(categorias $categorias)
-    {
+    public function edit(categorias $categorias) {
         //
     }
 
@@ -67,8 +64,7 @@ class CategoriasController extends Controller
      * @param  \App\categorias  $categorias
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, categorias $categorias)
-    {
+    public function update(Request $request, categorias $categorias) {
         //
     }
 
@@ -78,8 +74,8 @@ class CategoriasController extends Controller
      * @param  \App\categorias  $categorias
      * @return \Illuminate\Http\Response
      */
-    public function destroy(categorias $categorias)
-    {
+    public function destroy(categorias $categorias) {
         //
     }
+
 }
