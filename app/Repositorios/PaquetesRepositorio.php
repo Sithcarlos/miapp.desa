@@ -9,7 +9,8 @@ declare(strict_types=1);
 
 namespace App\Repositorios;
 
-use App\Modelos\paquetes;
+use Illuminate\Support\Facades\DB;
+//use App\Modelos\paquetes;
 
 /**
  * Description of PaquetesRepositorio
@@ -17,5 +18,15 @@ use App\Modelos\paquetes;
  * @author master
  */
 class PaquetesRepositorio {
-    //put your code here
+
+    public const TABLA = 'paquetes';
+
+    public function leerTodos() {
+        return DB::table(self::TABLA)->get();
+    }
+
+    public function leerId($id) {
+        return DB::table(self::TABLA)->where('id', $id)->first();
+    }
+
 }

@@ -9,7 +9,8 @@ declare(strict_types=1);
 
 namespace App\Repositorios;
 
-use App\Modelos\platillos;
+use Illuminate\Support\Facades\DB;
+//use App\Modelos\platillos;
 
 /**
  * Description of PlatillosRepositorio
@@ -17,5 +18,15 @@ use App\Modelos\platillos;
  * @author master
  */
 class PlatillosRepositorio {
-    //put your code here
+
+    public const TABLA = 'platillos';
+
+    public function leerTodos() {
+        return DB::table(self::TABLA)->get();
+    }
+
+    public function leerId($id) {
+        return DB::table(self::TABLA)->where('id', $id)->first();
+    }
+
 }

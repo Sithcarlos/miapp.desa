@@ -9,7 +9,8 @@ declare(strict_types=1);
 
 namespace App\Repositorios;
 
-use App\Modelos\categorias;
+use Illuminate\Support\Facades\DB;
+//use App\Modelos\categorias;
 
 /**
  * Description of CategoriasRepositorio
@@ -17,5 +18,15 @@ use App\Modelos\categorias;
  * @author master
  */
 class CategoriasRepositorio {
-    //put your code here
+
+    public const TABLA = 'categorias';
+
+    public function leerTodos() {
+        return DB::table(self::TABLA)->get();
+    }
+
+    public function leerId($id) {
+        return DB::table(self::TABLA)->where('id', $id)->first();
+    }
+
 }

@@ -9,7 +9,8 @@ declare(strict_types=1);
 
 namespace App\Repositorios;
 
-use App\Modelos\restaurantes;
+use Illuminate\Support\Facades\DB;
+//use App\Modelos\restaurantes;
 
 /**
  * Description of ResturantesRepositorio
@@ -17,5 +18,19 @@ use App\Modelos\restaurantes;
  * @author master
  */
 class ResturantesRepositorio {
-    //put your code here
+
+    public const TABLA = 'restaurantes';
+
+    public function leerTodos() {
+        return DB::table(self::TABLA)->get();
+    }
+
+    public function leerId($id) {
+        return DB::table(self::TABLA)->where('id', $id)->first();
+    }
+
+    public function leerRuta($ruta) {
+        return DB::table(self::TABLA)->where('ruta', $ruta)->first();
+    }
+
 }
