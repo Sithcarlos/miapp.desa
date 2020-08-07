@@ -20,9 +20,18 @@ class RestaurantesServicio {
 
     private $RResturantes;
 
-    //put your code here
     public function __construct(ResturantesRepositorio $Resturantes) {
         $this->RResturantes = $Resturantes;
+    }
+
+    /**
+     * 
+     * @param type $ruta
+     * @return type
+     */
+    public function obtener($ruta) {
+        $restaurante = $this->RResturantes->leerRuta($ruta);
+        return $restaurante[0]->activo;
     }
 
 }

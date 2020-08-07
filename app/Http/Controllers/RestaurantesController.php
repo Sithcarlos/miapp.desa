@@ -50,7 +50,7 @@ class RestaurantesController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function show($ruta) {
-        return $ruta;
+        return $this->SRestaurantes->obtener($ruta);
     }
 
     /**

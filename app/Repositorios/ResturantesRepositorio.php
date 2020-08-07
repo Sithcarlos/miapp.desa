@@ -10,6 +10,7 @@ declare(strict_types=1);
 namespace App\Repositorios;
 
 use Illuminate\Support\Facades\DB;
+
 //use App\Modelos\restaurantes;
 
 /**
@@ -30,7 +31,7 @@ class ResturantesRepositorio {
     }
 
     public function leerRuta($ruta) {
-        return DB::table(self::TABLA)->where('ruta', $ruta)->first();
+        return DB::select('CALL leer_restaurante(?)', [$ruta,]);
     }
 
 }
