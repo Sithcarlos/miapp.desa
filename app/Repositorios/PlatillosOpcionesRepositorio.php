@@ -30,4 +30,8 @@ class PlatillosOpcionesRepositorio {
         return DB::table(self::TABLA)->where('id', $id)->first();
     }
 
+    public function leerPlatillosId($platillo_id): array {
+        return DB::select('CALL leer_platillosOpciones(?)', [$platillo_id,]);
+    }
+
 }

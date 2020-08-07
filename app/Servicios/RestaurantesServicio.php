@@ -12,6 +12,7 @@ namespace App\Servicios;
 use App\Repositorios\ResturantesRepositorio;
 use App\Repositorios\CategoriasRepositorio;
 use App\Repositorios\PlatillosRepositorio;
+use App\Repositorios\PlatillosOpcionesRepositorio;
 
 /**
  * Description of RestaurantesServicio
@@ -23,24 +24,34 @@ class RestaurantesServicio {
     private $RResturantes;
     private $RCategorias;
     private $RPlatillos;
-
-    public function __construct(ResturantesRepositorio $Resturantes, CategoriasRepositorio $Categorias, PlatillosRepositorio $Platillos) {
-        $this->RResturantes = $Resturantes;
-        $this->RCategorias = $Categorias;
-        $this->RPlatillos = $Platillos;
-    }
+    private $RPlatillosOpciones;
 
     /**
      * 
-     * @param type $ruta
-     * @return type
+     * @param ResturantesRepositorio $Resturantes
+     * @param CategoriasRepositorio $Categorias
+     * @param PlatillosRepositorio $Platillos
+     * @param PlatillosOpcionesRepositorio $PlatillosOpciones
      */
-    public function obtener($ruta) {
+    public function __construct(ResturantesRepositorio $Resturantes, CategoriasRepositorio $Categorias, PlatillosRepositorio $Platillos, PlatillosOpcionesRepositorio $PlatillosOpciones) {
+        $this->RResturantes = $Resturantes;
+        $this->RCategorias = $Categorias;
+        $this->RPlatillos = $Platillos;
+        $this->RPlatillosOpciones = $PlatillosOpciones;
+    }
+
+   
+    /**
+     * 
+     * @param type $ruta
+     * @return array
+     */
+    public function obtener($ruta): array {
         $info = $this->RResturantes->leerRuta($ruta);
 
         $datos = [
             "paquete_id" => $info->paquete_id,
-            "activo" => $info->activo,
+            "activo" => (boolean) $info->activo,
             "descripcion" => $info->descripcion,
             "imagen_ruta" => $info->imagen_ruta,
             "nombre" => $info->nombre,
@@ -49,7 +60,13 @@ class RestaurantesServicio {
         return $datos;
     }
 
-    private function obtenerCategorias($restaurante_id) {
+
+    /**
+     * 
+     * @param type $restaurante_id
+     * @return array
+     */
+    private function obtenerCategorias($restaurante_id): array {
         $rows = $this->RCategorias->leerRestauranteId($restaurante_id);
         $categorias = [];
         foreach ($rows as $row) {
@@ -64,8 +81,43 @@ class RestaurantesServicio {
         return $categorias;
     }
 
-    private function obtenerPlatillos($categoria_id) {
-        return $this->RPlatillos->leerCategoriaId($categoria_id);
+
+    /**
+     * 
+     * @param type $categoria_id
+     * @return array
+     */
+    private function obtenerPlatillos($categoria_id): array {
+        $datos = $this->RPlatillos->leerCategoriaId($categoria_id);
+        $platillos = [];
+        foreach ($datos as $row) {
+            $platillos[] = [
+                "descripcion" => $row->descripcion,
+                "alergenos" => (boolean) $row->alergenos,
+                "nombre" => $row->nombre,
+                "precio" => (float) $row->precio,
+                "opciones" => $this->obtenerPlatillosOpciones($row->id),
+            ];
+        }
+        return $platillos;
+    }
+
+
+    /**
+     * 
+     * @param type $platillo_id
+     * @return array
+     */
+    private function obtenerPlatillosOpciones($platillo_id): array {
+        $datos = $this->RPlatillosOpciones->leerPlatillosId($platillo_id);
+        $opciones = [];
+        foreach ($datos as $row) {
+            $opciones[] = [
+                "opcion" => $row->opcion,
+                "precio" => (float) $row->precio,
+            ];
+        }
+        return $opciones;
     }
 
 }

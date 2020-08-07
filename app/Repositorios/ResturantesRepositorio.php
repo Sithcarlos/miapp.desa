@@ -30,7 +30,7 @@ class ResturantesRepositorio {
         return DB::table(self::TABLA)->where('id', $id)->first();
     }
 
-    public function leerRuta($ruta) {
+    public function leerRuta($ruta): object {
         $rows = DB::select('CALL leer_restaurante(?)', [$ruta,]);
         return $rows[0];
     }

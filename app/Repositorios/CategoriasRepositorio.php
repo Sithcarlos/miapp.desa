@@ -30,7 +30,7 @@ class CategoriasRepositorio {
         return DB::table(self::TABLA)->where('id', $id)->first();
     }
 
-    public function leerRestauranteId($restaurante_id) {
+    public function leerRestauranteId($restaurante_id): array {
         return DB::select('CALL leer_categorias(?)', [$restaurante_id,]);
     }
 
