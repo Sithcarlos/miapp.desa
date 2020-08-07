@@ -5,8 +5,15 @@ declare(strict_types=1);
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Servicios\CategoriasServicio;
 
 class CategoriasController extends Controller {
+
+    private $SCategorias;
+
+    public function __construct(CategoriasServicio $Categorias) {
+        $this->SCategorias = $Categorias;
+    }
 
     /**
      * Display a listing of the resource.
