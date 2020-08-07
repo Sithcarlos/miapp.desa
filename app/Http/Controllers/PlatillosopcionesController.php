@@ -5,8 +5,19 @@ declare(strict_types=1);
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Servicios\PlatillosOpcionesServicio;
 
 class PlatillosopcionesController extends Controller {
+
+    private $SPlatillosOpciones;
+
+    /**
+     * 
+     * @param PlatillosOpcionesServicio $PlatillosOpciones
+     */
+    public function __construct(PlatillosOpcionesServicio $PlatillosOpciones) {
+        $this->SPlatillosOpciones = $PlatillosOpciones;
+    }
 
     /**
      * Display a listing of the resource.
