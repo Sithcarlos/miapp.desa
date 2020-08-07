@@ -10,6 +10,7 @@ declare(strict_types=1);
 namespace App\Repositorios;
 
 use Illuminate\Support\Facades\DB;
+
 //use App\Modelos\platillos;
 
 /**
@@ -27,6 +28,10 @@ class PlatillosRepositorio {
 
     public function leerId($id) {
         return DB::table(self::TABLA)->where('id', $id)->first();
+    }
+
+    public function leerCategoriaId($categoria_id) {
+        return DB::select('CALL leer_platillos(?)', [$categoria_id,]);
     }
 
 }

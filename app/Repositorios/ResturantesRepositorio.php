@@ -31,7 +31,8 @@ class ResturantesRepositorio {
     }
 
     public function leerRuta($ruta) {
-        return DB::select('CALL leer_restaurante(?)', [$ruta,]);
+        $rows = DB::select('CALL leer_restaurante(?)', [$ruta,]);
+        return $rows[0];
     }
 
 }
