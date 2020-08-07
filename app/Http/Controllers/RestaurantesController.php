@@ -42,8 +42,8 @@ class RestaurantesController extends Controller {
      * @param  \App\restaurantes  $restaurantes
      * @return \Illuminate\Http\Response
      */
-    public function show($nombre) {
-        return $nombre;
+    public function show($ruta) {
+        return $ruta;
     }
 
     /**
