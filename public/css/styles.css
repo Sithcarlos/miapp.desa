@@ -1,0 +1,284 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300;1,500&display=swap);
+@font-face {
+    font-family: Conv_Poplar Std Black;
+    src: url(assets/fonts/PoplarStdBlack.eot);
+    src: local("☺"), url(assets/fonts/PoplarStdBlack.woff) format("woff"), url(assets/fonts/PoplarStdBlack.ttf) format("truetype"), url(assets/fonts/PoplarStdBlack.svg) format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+
+.pricing-table {
+    background-color: #eee;
+    font-family: Montserrat, sans-serif
+}
+
+.pricing-table .block-heading {
+    padding-top: 50px;
+    margin-bottom: 40px;
+    text-align: center
+}
+
+.pricing-table .block-heading h2 {
+    color: #3b99e0
+}
+
+.pricing-table .block-heading p {
+    text-align: center;
+    max-width: 420px;
+    margin: auto;
+    opacity: .7
+}
+
+.pricing-table .heading {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1)
+}
+
+.pricing-table .item {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .075);
+    border-top: 2px solid #5ea4f3;
+    padding: 30px;
+    overflow: hidden;
+    position: relative
+}
+
+.pricing-table .col-md-5:not(:last-child) .item {
+    margin-bottom: 30px
+}
+
+.pricing-table .item button {
+    font-weight: 600
+}
+
+.pricing-table .ribbon {
+    width: 160px;
+    height: 32px;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    box-shadow: 0 2px 3px hsla(0, 0%, 53.3%, .25);
+    background: #4dbe3b;
+    transform: rotate(45deg);
+    position: absolute;
+    right: -42px;
+    top: 20px;
+    padding-top: 7px
+}
+
+.pricing-table .item p {
+    text-align: center;
+    margin-top: 20px;
+    opacity: .7
+}
+
+.pricing-table .features .feature {
+    font-weight: 600
+}
+
+.pricing-table .features h4 {
+    text-align: center;
+    font-size: 18px;
+    padding: 5px
+}
+
+.pricing-table .price h4 {
+    margin: 15px 0;
+    font-size: 45px;
+    text-align: center;
+    color: #2288f9
+}
+
+.pricing-table .buy-now button {
+    text-align: center;
+    margin: auto;
+    font-weight: 600;
+    padding: 9px 0
+}
+
+body {
+    font-family: Montserrat;
+    font-size: 12px
+}
+
+.gradient-1o-ccpl {
+    background: #26d400;
+    background: linear-gradient(90deg, #26d400 33%, #e7db5a 93%)
+}
+
+.gradient-2o-cppl {
+    background: #b700d4;
+    background: linear-gradient(90deg, #b700d4 33%, #815ae7 93%)
+}
+
+.gradient-3o-cppl {
+    background: #d400bf;
+    background: linear-gradient(90deg, #d400bf 33%, #e75a5a 93%)
+}
+
+.gradient-1l-ccpl {
+    background: #c6febc;
+    background: linear-gradient(90deg, #c6febc 33%, #fffbd8 93%)
+}
+
+.gradient-2l-cppl {
+    background: #cbbbd7;
+    background: linear-gradient(90deg, #cbbbd7 33%, #c9f3ff 93%)
+}
+
+.gradient-3l-cppl {
+    background: #ffcffa;
+    background: linear-gradient(90deg, #ffcffa 33%, #f0d6d6 93%)
+}
+
+.thumbnail-cppl {
+    position: relative
+}
+
+.caption-15-cppl {
+    top: 15%;
+    position: absolute;
+    left: 0;
+    width: 100%
+}
+
+.sombra-cppl {
+    box-shadow: 4px 4px 10px -2px rgba(0, 0, 0, .75)
+}
+
+.borde-redondo-cppl {
+    border-radius: 1rem
+}
+
+.color-negro-cppl {
+    color: #000!important
+}
+
+.color-azul-cppl {
+    color: #402107!important
+}
+
+.color-gris-oscuro-cppl {
+    color: #434343!important
+}
+
+.color-gris-light-cppl {
+    color: #888!important
+}
+
+.responsive-media-cppl {
+    font-size: 6vw
+}
+
+@media (max-width:540px) {
+    .responsive-media-cppl {
+        font-size: 7vw
+    }
+}
+
+@media (min-width:540px) {
+    .responsive-media-cppl {
+        font-size: 5vw
+    }
+}
+
+@media (min-width:720px) {
+    .responsive-media-cppl {
+        font-size: 4vw
+    }
+}
+
+@media (min-width:960px) {
+    .responsive-media-cppl {
+        font-size: 3vw
+    }
+}
+
+@media (min-width:1140px) {
+    .responsive-media-cppl {
+        font-size: 2vw
+    }
+}
+
+.sombra-cppl {
+    box-shadow: 4px 6px 5px 0 rgba(0, 0, 0, .75)
+}
+
+.deg-cppl {
+    background: #f6eee2;
+    background: -webkit-gradient(left top, left bottom, color-stop(0, #f6eee2), color-stop(36%, #f6eee2), color-stop(45%, #f6eee2), color-stop(69%, #dbc3b6), color-stop(73%, #dbc3b6), color-stop(100%, #dbc3b6));
+    background: linear-gradient(180deg, #f6eee2 0, #f6eee2 36%, #f6eee2 45%, #dbc3b6 69%, #dbc3b6 73%, #dbc3b6);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#f6eee2", endColorstr="#dbc3b6", GradientType=0)
+}
+
+.color-main-cppl {
+    color: #e5201c
+}
+
+.fuente-main-cppl {
+    font-family: Conv_Poplar Std Black, Sans-Serif
+}
+
+.color-off-cppl {
+    color: #e85317
+}
+
+.bg-main-cppl {
+    background-color: #e5201c
+}
+
+.bg-main-off {
+    background-color: #e85317
+}
+
+.ancho-min-cppl {
+    min-width: 320px
+}
+
+.border-cppl {
+    border-color: #e5201c!important
+}
+
+.form-off-cppl {
+    display: none
+}
+
+@media screen and (max-width:575px) {
+    .form-off-cppl {
+        display: revert;
+        background-color: #e5201c
+    }
+}
+
+@media screen and (max-width:575px) {
+    .form-main-cppl {
+        display: none
+    }
+}
+
+.flotante {
+    display: scroll;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    background-color: hsla(0, 0%, 100%, .5);
+    border-radius: 50%
+}
+
+.miniatura-ccl {
+    margin: .1rem;
+    width: 24em;
+    height: 10em
+}
+
+.full-ccl {
+    width: 48em;
+    height: 20em
+}
+
+.boton-cursor {
+    cursor: pointer
+}
