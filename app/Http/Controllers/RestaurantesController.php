@@ -51,7 +51,9 @@ class RestaurantesController extends Controller {
      */
     public function show($ruta) {
         $dRestaurante = $this->SRestaurantes->obtener($ruta);
-        return view('v1.paquetes.simple', compact('dRestaurante'));
+                        return view('v1.paquetes.basico', compact('dRestaurante'));
+           //     return view('v1.paquetes.completo', compact('dRestaurante'));
+     //  return view('v1.paquetes.simple', compact('dRestaurante'));
     }
 
     /**
