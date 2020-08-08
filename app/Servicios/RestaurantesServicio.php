@@ -40,7 +40,6 @@ class RestaurantesServicio {
         $this->RPlatillosOpciones = $PlatillosOpciones;
     }
 
-   
     /**
      * 
      * @param type $ruta
@@ -48,18 +47,20 @@ class RestaurantesServicio {
      */
     public function obtener($ruta): array {
         $info = $this->RResturantes->leerRuta($ruta);
-
-        $datos = [
+        if ($info->activo) {
+            $cc = $this->obtenerCategorias($info->id);
+        } else {
+            $cc = [];
+        }
+        return [
             "paquete_id" => $info->paquete_id,
             "activo" => (boolean) $info->activo,
             "descripcion" => $info->descripcion,
             "imagen_ruta" => $info->imagen_ruta,
             "nombre" => $info->nombre,
-            "categorias" => $this->obtenerCategorias($info->id),
+            "categorias" => $cc,
         ];
-        return $datos;
     }
-
 
     /**
      * 
@@ -81,7 +82,6 @@ class RestaurantesServicio {
         return $categorias;
     }
 
-
     /**
      * 
      * @param type $categoria_id
@@ -101,7 +101,6 @@ class RestaurantesServicio {
         }
         return $platillos;
     }
-
 
     /**
      * 

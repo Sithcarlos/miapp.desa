@@ -32,6 +32,17 @@ class ResturantesRepositorio {
 
     public function leerRuta($ruta): object {
         $rows = DB::select('CALL leer_restaurante(?)', [$ruta,]);
+        if (empty($rows)) {
+            return (object) [
+                        "id" => 0,
+                        "paquete_id" => 0,
+                        "activo" => false,
+                        "descripcion" => '',
+                        "imagen_ruta" => '',
+                        "nombre" => '',
+                        "categorias" => [],
+            ];
+        }
         return $rows[0];
     }
 
