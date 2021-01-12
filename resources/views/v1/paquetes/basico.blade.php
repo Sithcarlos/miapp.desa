@@ -2,10 +2,6 @@
 
 @section('content')
 
-
-
-
-
 <!---->
 <div class="row mb-3">
     <div class="col-sm-12 pt-2 pb-2">
@@ -60,9 +56,9 @@
     </div>
 </div>
 <!--/row-->
-<!--inicio categoria-->
-@forelse($dRestaurante['categorias'] as $rowcat)
 
+<!--inicio categorias-->
+@forelse($dRestaurante['categorias'] as $rowcat)
 <div  class="row mb-3 animate__animated animate__fadeIn animate__slower">
     <div id="{{ $rowcat['id'] }}" class="col-sm-12 mb-3 text-center">
 
@@ -74,8 +70,8 @@
         </h4>
     </div>
 
-    @forelse($rowcat['platillos'] as $plats)
     <!--inicio platillos-->
+    @forelse($rowcat['platillos'] as $plats)
     <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 mb-2">
         <div class="card border-0">
             <div class="card-body">
@@ -101,6 +97,7 @@
                     </div>
                 </div>
                 @if( empty($plats['opciones']) == false )
+                <!--inicio opciones-->
                 <ul  class="list-group list-group-flush">
                     @foreach( $plats['opciones'] as $opt )
                     <li  class="list-group-item d-flex justify-content-between align-items-center">
@@ -113,15 +110,17 @@
                     </li>
                     @endforeach
                 </ul>
+                <!--fin opciones-->
                 @endif
-                <!---->
                 @if( $plats['alergenos'] )
+                <!--inicio alergenos-->
                 <p class="text-info"  >
                     <strong>
                         Puede contener ingredientes alérgenos
                     </strong>
                     <i class="fas fa-allergies"></i>
-                </p>                
+                </p>
+                <!--fin alergenos-->
                 @endif
 
             </div>
@@ -129,17 +128,15 @@
         </div>
         <hr />
     </div>
-    <!--fin platillos-->
     @empty
-    <p>NO hay platillos</p>
+    <p>No hay platillos</p>
     @endforelse
+    <!--fin platillos-->
 
 </div>
-<!--fin categoria-->
-
-
 @empty
 <p>No hay categorias</p>
 @endforelse
+<!--fin categorias-->
 
 @endsection
