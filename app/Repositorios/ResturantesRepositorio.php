@@ -46,4 +46,8 @@ class ResturantesRepositorio {
         return $rows[0];
     }
 
+    public function leerIdUsuario($idUsuario) {
+        return DB::table(self::TABLA)->where('usuario_id', $idUsuario)->get();
+    }
+
 }

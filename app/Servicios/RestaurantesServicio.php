@@ -118,5 +118,23 @@ class RestaurantesServicio {
         }
         return $opciones;
     }
+    
+    /**
+     * Lista de restaurantes
+     * Segun el usuario
+     * SI es admin, muestra todos
+     * SI NO, muestra solo los que le pertenecen
+     */
+    public function listarRestaurantes($idUsuario): object
+    {
+        // Listado de usuarios administradores
+        $usuariosAdmin = [1];
+        if (array_search($idUsuario, $usuariosAdmin) === false) {
+            return $this->RResturantes->leerIdUsuario($idUsuario);
+        } else {
+            return $this->RResturantes->leerTodos();
+        }
+    }
 
 }
+
