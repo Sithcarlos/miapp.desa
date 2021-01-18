@@ -5,15 +5,11 @@ declare(strict_types=1);
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Servicios\RestaurantesServicio;
 
 class HomeController extends Controller
 {
-    private $SRestaurantes;
-
-    public function __construct(RestaurantesServicio $Restaurantes)
+    public function __construct()
     {
-        $this->SRestaurantes = $Restaurantes;
     }
 
     /**
@@ -21,9 +17,8 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index(Request $request)
+    public function index()
     {
-        $dRestaurantes = $this->SRestaurantes->listarRestaurantes(auth()->user()->id);
-        return view('v1.home', compact('dRestaurantes'));
+        return view('v1.home') ;
     }
 }

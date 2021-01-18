@@ -61,7 +61,9 @@ class RestaurantesController extends Controller {
      * @param  \App\restaurantes  $restaurantes
      * @return \Illuminate\Http\Response
      */
-    public function show($id) {
+    public function show() {
+        $dRestaurantes = $this->SRestaurantes->listarRestaurantes(auth()->user()->id);
+        return view('v1.restaurantes.index', compact('dRestaurantes'));
     }
 
     /**
