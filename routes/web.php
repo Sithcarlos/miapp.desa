@@ -36,4 +36,4 @@ Route::get('/home', 'HomeController@index')->name('home')->middleware(['auth', '
  * Escribir rutas antes de aqui
  * Obtiene el restaurante y lo muestra al publico
  */
-Route::get('/{ruta}', 'RestaurantesController@show');
+Route::get('/{ruta}', 'RestaurantesController@index');

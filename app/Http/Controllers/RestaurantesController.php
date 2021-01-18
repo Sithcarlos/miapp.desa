@@ -20,8 +20,20 @@ class RestaurantesController extends Controller {
      *
      * @return \Illuminate\Http\Response
      */
-    public function index() {
-        //
+    public function index($ruta) {
+        $dRestaurante = $this->SRestaurantes->obtener($ruta);
+        $vista = '';
+        switch ($dRestaurante['paquete_id']) {
+            case 2:
+                $vista = 'v1.paquetes.basico';
+                break;
+            case 3:
+                $vista = 'v1.paquetes.completo';
+                break;
+            default:
+                $vista = 'v1.paquetes.simple';
+        }
+        return view($vista, compact('dRestaurante'));
     }
 
     /**
@@ -49,20 +61,7 @@ class RestaurantesController extends Controller {
      * @param  \App\restaurantes  $restaurantes
      * @return \Illuminate\Http\Response
      */
-    public function show($ruta) {
-        $dRestaurante = $this->SRestaurantes->obtener($ruta);
-        $vista = '';
-        switch ($dRestaurante['paquete_id']) {
-            case 2:
-                $vista = 'v1.paquetes.basico';
-                break;
-            case 3:
-                $vista = 'v1.paquetes.completo';
-                break;
-            default:
-                $vista = 'v1.paquetes.simple';
-        }
-        return view($vista, compact('dRestaurante'));
+    public function show($id) {
     }
 
     /**
