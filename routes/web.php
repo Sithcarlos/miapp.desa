@@ -30,13 +30,15 @@ Route::get('/home', 'HomeController@index')->name('home')->middleware(['auth', '
 /**
  * Escribir rutas desde aqui
  */
-//
-
+// Restaurantes
+// listado
+Route::get('/restaurantes', 'RestaurantesController@show')->middleware(['auth', 'verified']);
+// Mostrar editar restaurantes por id
+Route::get('/restaurantes/{id}', 'RestaurantesController@edit')->middleware(['auth', 'verified']);
+// Guardar cambios del restaurante
+Route::post('/restaurantes/{id}', 'RestaurantesController@update')->middleware(['auth', 'verified']);
 /**
  * Escribir rutas antes de aqui
  * Obtiene el restaurante y lo muestra al publico
  */
-
-
-Route::get('/restaurantes', 'RestaurantesController@show')->middleware(['auth', 'verified']);
 Route::get('/{ruta}', 'RestaurantesController@index');

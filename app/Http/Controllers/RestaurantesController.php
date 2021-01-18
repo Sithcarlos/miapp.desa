@@ -68,23 +68,16 @@ class RestaurantesController extends Controller {
 
     /**
      * Show the form for editing the specified resource.
-     *
-     * @param  \App\restaurantes  $restaurantes
-     * @return \Illuminate\Http\Response
      */
-    public function edit(restaurantes $restaurantes) {
-        //
+    public function edit($id) {
+           return view('v1.restaurantes.editar', compact('id'));
     }
 
     /**
      * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\restaurantes  $restaurantes
-     * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, restaurantes $restaurantes) {
-        //
+    public function update() {
+        return 'actualizado';
     }
 
     /**
