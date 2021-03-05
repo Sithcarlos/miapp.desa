@@ -16,12 +16,14 @@ use App\Repositorios\CategoriasRepositorio;
  *
  * @author master
  */
-class CategoriasServicio {
+class CategoriasServicio
+{
 
     private $RCategorias;
 
     //put your code here
-    public function __construct(CategoriasRepositorio $Categorias) {
+    public function __construct(CategoriasRepositorio $Categorias)
+    {
         $this->RCategorias = $Categorias;
     }
 
@@ -33,5 +35,4 @@ class CategoriasServicio {
     {
         return $this->RCategorias->leerRestauranteId($id);
     }
-
 }

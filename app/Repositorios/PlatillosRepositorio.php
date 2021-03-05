@@ -18,20 +18,23 @@ use Illuminate\Support\Facades\DB;
  *
  * @author master
  */
-class PlatillosRepositorio {
+class PlatillosRepositorio
+{
 
     public const TABLA = 'platillos';
 
-    public function leerTodos() {
+    public function leerTodos()
+    {
         return DB::table(self::TABLA)->get();
     }
 
-    public function leerId($id) {
+    public function leerId($id)
+    {
         return DB::table(self::TABLA)->where('id', $id)->first();
     }
 
-    public function leerCategoriaId($categoria_id) {
+    public function leerCategoriaId($categoria_id)
+    {
         return DB::select('CALL leer_platillos(?)', [$categoria_id,]);
     }
-
 }

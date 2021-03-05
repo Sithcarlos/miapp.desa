@@ -16,13 +16,14 @@ use App\Repositorios\PaquetesRepositorio;
  *
  * @author master
  */
-class PaquetesServicio {
+class PaquetesServicio
+{
 
     private $RPaquetes;
 
     //put your code here
-    public function __construct(PaquetesRepositorio $Paquetes) {
+    public function __construct(PaquetesRepositorio $Paquetes)
+    {
         $this->RPaquetes = $Paquetes;
     }
-
 }

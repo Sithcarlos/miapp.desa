@@ -9,10 +9,11 @@
             <div class="card">
                 <div class="card-header" id="headingTwo">
                     <h4 class="mb-0">
-                        <button class="btn btn-link btn-block text-left collapsed color-azul-cppl" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <button class="btn btn-link btn-block text-left collapsed color-azul-cppl" type="button"
+                            data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                            aria-controls="collapseTwo">
                             Haz click y descubre todo lo que podemos ofrecerte&nbsp;<i
-                                class="fas fa-chevron-circle-down"
-                                ></i>
+                                class="fas fa-chevron-circle-down"></i>
                         </button>
                     </h4>
                 </div>
@@ -34,7 +35,7 @@
                             @empty
 
                             <li class="list-group-item">
-                                <a  class="btn color-negro-cppl">
+                                <a class="btn color-negro-cppl">
                                     <h5 class="text-left">
                                         <strong>
                                             No hay categorías&nbsp;<i class="fas fa-chevron-down"></i>
@@ -59,11 +60,11 @@
 
 <!--inicio categoria-->
 @forelse($dRestaurante['categorias'] as $rowcat)
-<div  class="row mb-3 animate__animated animate__fadeIn animate__slower">
+<div class="row mb-3 animate__animated animate__fadeIn animate__slower">
     <div id="{{ $rowcat['id'] }}" class="col-sm-12 mb-3 text-center">
 
         @if( $rowcat['imagen_ruta'] )
-        <img  class="img-fluid mb-3" src="{{ URL::asset($rowcat['imagen_ruta']) }}" alt="imagen_categoria" />
+        <img class="img-fluid mb-3" src="{{ URL::asset($rowcat['imagen_ruta']) }}" alt="imagen_categoria" />
         @endif
 
 
@@ -96,16 +97,16 @@
                     <div class="ml-2">
                         <i class="color-gris-oscuro-cppl">
                             <strong class="responsive-media-cppl">
-                                 {{ ($plats['precio'])? ''.$plats['precio']: ''  }}
+                                {{ ($plats['precio'])? ''.$plats['precio']: ''  }}
                             </strong>
                         </i>
                     </div>
                 </div>
                 @if( empty($plats['opciones']) == false )
                 <!--inicio opciones-->
-                <ul  class="list-group list-group-flush">
+                <ul class="list-group list-group-flush">
                     @foreach( $plats['opciones'] as $opt )
-                    <li  class="list-group-item d-flex justify-content-between align-items-center">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
                         <h6>
                             {{ $opt['opcion'] }}
                         </h6>
@@ -119,7 +120,7 @@
                 @endif
                 @if( $plats['alergenos'] )
                 <!--inicio alergenos-->
-                <p class="text-info"  >
+                <p class="text-info">
                     <strong>
                         Puede contener ingredientes alérgenos
                     </strong>

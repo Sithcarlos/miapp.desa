@@ -16,7 +16,8 @@ use App\Repositorios\PlatillosOpcionesRepositorio;
  *
  * @author master
  */
-class PlatillosOpcionesServicio {
+class PlatillosOpcionesServicio
+{
 
     private $RPlatillosOpciones;
 
@@ -24,8 +25,8 @@ class PlatillosOpcionesServicio {
      * 
      * @param PlatillosOpcionesRepositorio $PlatillosOpciones
      */
-    public function __construct(PlatillosOpcionesRepositorio $PlatillosOpciones) {
+    public function __construct(PlatillosOpcionesRepositorio $PlatillosOpciones)
+    {
         $this->RPlatillosOpciones = $PlatillosOpciones;
     }
-
 }

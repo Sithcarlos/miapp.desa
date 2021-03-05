@@ -4,7 +4,8 @@ namespace App\Modelos;
 
 use Illuminate\Database\Eloquent\Model;
 
-class restaurantes extends Model {
+class restaurantes extends Model
+{
 
     /**
      * The attributes that are mass assignable.
@@ -20,8 +21,7 @@ class restaurantes extends Model {
      *
      * @var array
      */
-    protected $hidden = [
-    ];
+    protected $hidden = [];
 
     /**
      * The attributes that should be cast to native types.
@@ -31,5 +31,4 @@ class restaurantes extends Model {
     protected $casts = [
         'activo' => 'boolean',
     ];
-
 }

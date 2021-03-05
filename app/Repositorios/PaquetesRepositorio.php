@@ -17,16 +17,18 @@ use Illuminate\Support\Facades\DB;
  *
  * @author master
  */
-class PaquetesRepositorio {
+class PaquetesRepositorio
+{
 
     public const TABLA = 'paquetes';
 
-    public function leerTodos() {
+    public function leerTodos()
+    {
         return DB::table(self::TABLA)->get();
     }
 
-    public function leerId($id) {
+    public function leerId($id)
+    {
         return DB::table(self::TABLA)->where('id', $id)->first();
     }
-
 }

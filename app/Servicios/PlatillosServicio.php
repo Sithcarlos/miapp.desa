@@ -16,13 +16,14 @@ use App\Repositorios\PlatillosRepositorio;
  *
  * @author master
  */
-class PlatillosServicio {
+class PlatillosServicio
+{
 
     private $RPlatillos;
 
     //put your code here
-    public function __construct(PlatillosRepositorio $Platillos) {
+    public function __construct(PlatillosRepositorio $Platillos)
+    {
         $this->RPlatillos = $Platillos;
     }
-
 }

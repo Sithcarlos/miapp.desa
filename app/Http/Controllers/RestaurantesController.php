@@ -7,11 +7,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Servicios\RestaurantesServicio;
 
-class RestaurantesController extends Controller {
+class RestaurantesController extends Controller
+{
 
     private $SRestaurantes;
 
-    public function __construct(RestaurantesServicio $Restaurantes) {
+    public function __construct(RestaurantesServicio $Restaurantes)
+    {
         $this->SRestaurantes = $Restaurantes;
     }
 
@@ -20,7 +22,8 @@ class RestaurantesController extends Controller {
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($ruta) {
+    public function index($ruta)
+    {
         $dRestaurante = $this->SRestaurantes->obtener($ruta);
         $vista = '';
         switch ($dRestaurante['paquete_id']) {
@@ -41,7 +44,8 @@ class RestaurantesController extends Controller {
      *
      * @return \Illuminate\Http\Response
      */
-    public function create() {
+    public function create()
+    {
         //
     }
 
@@ -51,7 +55,8 @@ class RestaurantesController extends Controller {
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request) {
+    public function store(Request $request)
+    {
         //
     }
 
@@ -61,7 +66,8 @@ class RestaurantesController extends Controller {
      * @param  \App\restaurantes  $restaurantes
      * @return \Illuminate\Http\Response
      */
-    public function show() {
+    public function show()
+    {
         $dRestaurantes = $this->SRestaurantes->listarRestaurantes(auth()->user()->id);
         return view('v1.restaurantes.index', compact('dRestaurantes'));
     }
@@ -96,8 +102,8 @@ class RestaurantesController extends Controller {
      * @param  \App\restaurantes  $restaurantes
      * @return \Illuminate\Http\Response
      */
-    public function destroy(restaurantes $restaurantes) {
+    public function destroy(restaurantes $restaurantes)
+    {
         //
     }
-
 }

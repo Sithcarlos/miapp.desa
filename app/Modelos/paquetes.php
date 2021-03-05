@@ -4,7 +4,8 @@ namespace App\Modelos;
 
 use Illuminate\Database\Eloquent\Model;
 
-class paquetes extends Model {
+class paquetes extends Model
+{
 
     /**
      * The attributes that are mass assignable.
@@ -12,7 +13,7 @@ class paquetes extends Model {
      * @var array
      */
     protected $fillable = [
-        'nombre','updated_at',
+        'nombre', 'updated_at',
     ];
 
     /**
@@ -20,15 +21,12 @@ class paquetes extends Model {
      *
      * @var array
      */
-    protected $hidden = [
-    ];
+    protected $hidden = [];
 
     /**
      * The attributes that should be cast to native types.
      *
      * @var array
      */
-    protected $casts = [
-    ];
-
+    protected $casts = [];
 }

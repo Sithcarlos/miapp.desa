@@ -7,7 +7,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Servicios\PlatillosOpcionesServicio;
 
-class PlatillosopcionesController extends Controller {
+class PlatillosopcionesController extends Controller
+{
 
     private $SPlatillosOpciones;
 
@@ -15,7 +16,8 @@ class PlatillosopcionesController extends Controller {
      * 
      * @param PlatillosOpcionesServicio $PlatillosOpciones
      */
-    public function __construct(PlatillosOpcionesServicio $PlatillosOpciones) {
+    public function __construct(PlatillosOpcionesServicio $PlatillosOpciones)
+    {
         $this->SPlatillosOpciones = $PlatillosOpciones;
     }
 
@@ -24,7 +26,8 @@ class PlatillosopcionesController extends Controller {
      *
      * @return \Illuminate\Http\Response
      */
-    public function index() {
+    public function index()
+    {
         //
     }
 
@@ -33,7 +36,8 @@ class PlatillosopcionesController extends Controller {
      *
      * @return \Illuminate\Http\Response
      */
-    public function create() {
+    public function create()
+    {
         //
     }
 
@@ -43,7 +47,8 @@ class PlatillosopcionesController extends Controller {
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request) {
+    public function store(Request $request)
+    {
         //
     }
 
@@ -53,7 +58,8 @@ class PlatillosopcionesController extends Controller {
      * @param  \App\platillosopciones  $platillosopciones
      * @return \Illuminate\Http\Response
      */
-    public function show(platillosopciones $platillosopciones) {
+    public function show(platillosopciones $platillosopciones)
+    {
         //
     }
 
@@ -63,7 +69,8 @@ class PlatillosopcionesController extends Controller {
      * @param  \App\platillosopciones  $platillosopciones
      * @return \Illuminate\Http\Response
      */
-    public function edit(platillosopciones $platillosopciones) {
+    public function edit(platillosopciones $platillosopciones)
+    {
         //
     }
 
@@ -74,7 +81,8 @@ class PlatillosopcionesController extends Controller {
      * @param  \App\platillosopciones  $platillosopciones
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, platillosopciones $platillosopciones) {
+    public function update(Request $request, platillosopciones $platillosopciones)
+    {
         //
     }
 
@@ -84,8 +92,8 @@ class PlatillosopcionesController extends Controller {
      * @param  \App\platillosopciones  $platillosopciones
      * @return \Illuminate\Http\Response
      */
-    public function destroy(platillosopciones $platillosopciones) {
+    public function destroy(platillosopciones $platillosopciones)
+    {
         //
     }
-
 }

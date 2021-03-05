@@ -4,7 +4,8 @@ namespace App\Modelos;
 
 use Illuminate\Database\Eloquent\Model;
 
-class platillos extends Model {
+class platillos extends Model
+{
 
     /**
      * The attributes that are mass assignable.
@@ -20,15 +21,12 @@ class platillos extends Model {
      *
      * @var array
      */
-    protected $hidden = [
-    ];
+    protected $hidden = [];
 
     /**
      * The attributes that should be cast to native types.
      *
      * @var array
      */
-    protected $casts = [
-    ];
-
+    protected $casts = [];
 }

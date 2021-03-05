@@ -7,11 +7,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Servicios\CategoriasServicio;
 
-class CategoriasController extends Controller {
+class CategoriasController extends Controller
+{
 
     private $SCategorias;
 
-    public function __construct(CategoriasServicio $Categorias) {
+    public function __construct(CategoriasServicio $Categorias)
+    {
         $this->SCategorias = $Categorias;
     }
 
@@ -20,7 +22,8 @@ class CategoriasController extends Controller {
      *
      * @return \Illuminate\Http\Response
      */
-    public function index() {
+    public function index()
+    {
         //
     }
 
@@ -29,7 +32,8 @@ class CategoriasController extends Controller {
      *
      * @return \Illuminate\Http\Response
      */
-    public function create() {
+    public function create()
+    {
         //
     }
 
@@ -39,7 +43,8 @@ class CategoriasController extends Controller {
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request) {
+    public function store(Request $request)
+    {
         //
     }
 
@@ -49,7 +54,8 @@ class CategoriasController extends Controller {
      * @param  \App\categorias  $categorias
      * @return \Illuminate\Http\Response
      */
-    public function show(categorias $categorias) {
+    public function show(categorias $categorias)
+    {
         //
     }
 
@@ -59,7 +65,8 @@ class CategoriasController extends Controller {
      * @param  \App\categorias  $categorias
      * @return \Illuminate\Http\Response
      */
-    public function edit(categorias $categorias) {
+    public function edit(categorias $categorias)
+    {
         //
     }
 
@@ -70,7 +77,8 @@ class CategoriasController extends Controller {
      * @param  \App\categorias  $categorias
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, categorias $categorias) {
+    public function update(Request $request, categorias $categorias)
+    {
         //
     }
 
@@ -80,8 +88,8 @@ class CategoriasController extends Controller {
      * @param  \App\categorias  $categorias
      * @return \Illuminate\Http\Response
      */
-    public function destroy(categorias $categorias) {
+    public function destroy(categorias $categorias)
+    {
         //
     }
-
 }
