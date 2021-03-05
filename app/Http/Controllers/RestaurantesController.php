@@ -69,15 +69,25 @@ class RestaurantesController extends Controller {
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit($id) {
-           return view('v1.restaurantes.editar', compact('id'));
+    public function edit($id)
+    {
+        $info = $this->SRestaurantes->datosRestaurante($id);
+        if ($info['restaurante'] == null) {
+            return 'no exite';
+        }
+        return view('v1.restaurantes.editar', compact('id', 'info'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update() {
-        return 'actualizado';
+    public function update(Request $request)
+    {
+        return [
+            $request->nombre,
+            $request->descripcion,
+            $request->id,
+        ];
     }
 
     /**

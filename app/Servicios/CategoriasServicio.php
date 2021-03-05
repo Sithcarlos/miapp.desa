@@ -25,4 +25,13 @@ class CategoriasServicio {
         $this->RCategorias = $Categorias;
     }
 
+    /**
+     * Obtiene todas las categorias de un restaurante,
+     * segun el id del restaurante
+     */
+    public function leerCategoriaIdRestaurante($id)
+    {
+        return $this->RCategorias->leerRestauranteId($id);
+    }
+
 }

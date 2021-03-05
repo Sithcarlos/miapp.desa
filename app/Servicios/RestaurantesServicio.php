@@ -135,6 +135,22 @@ class RestaurantesServicio {
             return $this->RResturantes->leerTodos();
         }
     }
+/**
+ * obtiene los datos basicos del restaurante
+ * y un listado de todas sus categorias
+ * esto es para mostrarse en la pantalla
+ * editar restaurante
+ */
+    public function datosRestaurante($id): array
+    {
+        $c = $this->RCategorias->leerRestauranteId($id);
+        $r = $this->RResturantes->leerId($id);
+
+        return [
+            "restaurante" => $r,
+            "categorias" => $c,
+        ];
+    }
 
 }
 
